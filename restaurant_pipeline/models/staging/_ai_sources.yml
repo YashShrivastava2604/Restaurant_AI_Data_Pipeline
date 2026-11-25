@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: ai
+    catalog: workspace
+    schema: ai
+    tables:
+      - name: review_enriched
+
+  - name: silver
+    catalog: workspace
+    schema: silver
+    tables:
+      - name: reviews
+      - name: restaurant

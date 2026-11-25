@@ -1,0 +1,44 @@
+services:
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: restaurant-airflow
+
+    command: standalone
+
+    ports:
+      - "8080:8080"
+
+    env_file:
+      - ../.env
+
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+      AIRFLOW__API__SECRET_KEY: "change-this-local-secret"
+      BATCH_SIZE: "5"
+
+    volumes:
+      # Airflow DAGs and logs
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+
+      # Existing dbt project
+      - ../restaurant_pipeline:/opt/airflow/dbt/restaurant_pipeline
+
+      # Existing AI scripts
+      - ../ai:/opt/airflow/ai
+
+      # Existing Databricks dbt profile
+      - ${HOME}/.dbt/profiles.yml:/home/airflow/.dbt/profiles.yml:ro
+
+      # Environment file for scripts using load_dotenv()
+      - ../.env:/opt/airflow/.env:ro
+
+    restart: unless-stopped
+
+    mem_limit: 3g
+    cpus: 1.5

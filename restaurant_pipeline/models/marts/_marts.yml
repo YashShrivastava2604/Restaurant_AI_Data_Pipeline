@@ -1,0 +1,78 @@
+
+version: 2
+
+models:
+  - name: mart_daily_city_revenue
+    description: "Daily order and revenue metrics aggregated by city."
+    columns:
+      - name: order_date
+        description: "Date on which orders were placed."
+        data_tests: [not_null]
+      - name: city
+        description: "City of the restaurant fulfilling the order."
+        data_tests: [not_null]
+      - name: total_orders
+        description: "Total orders placed on that date in the city."
+      - name: delivered_orders
+        description: "Number of successfully delivered orders."
+      - name: cancel_rate
+        description: "Cancelled orders divided by total orders."
+      - name: gmv
+        description: "Gross merchandise value from delivered orders, in INR."
+      - name: aov
+        description: "Average sales amount per delivered order, in INR."
+
+  - name: mart_restaurant_performance
+    description: "Revenue, ratings and delivery performance by restaurant."
+    columns:
+      - name: restaurant_id
+        description: "Unique identifier of the restaurant."
+        data_tests: [not_null, unique]
+      - name: restaurant_name
+        description: "Name of the restaurant."
+      - name: city
+        description: "City where the restaurant operates."
+      - name: cuisine
+        description: "Cuisine category of the restaurant."
+      - name: total_orders
+        description: "Total orders associated with the restaurant."
+      - name: revenue
+        description: "Sales amount from delivered orders, in INR."
+      - name: avg_customer_rating
+        description: "Average customer rating across orders with a rating."
+      - name: avg_delivery_min
+        description: "Average delivery time in minutes."
+
+  - name: mart_delivery_sla
+    description: "Delivery-time percentiles aggregated by city and order hour."
+    columns:
+      - name: city
+        description: "City where the restaurant is located."
+        data_tests: [not_null]
+      - name: order_hour
+        description: "Hour of the day when the order was placed, from 0 to 23."
+        data_tests: [not_null]
+      - name: delivered_orders
+        description: "Number of delivered orders in the group."
+      - name: p50_delivery_min
+        description: "Median delivery time in minutes."
+      - name: p90_delivery_min
+        description: "90th percentile delivery time in minutes."
+  - name: mart_review_insights
+    description: "AI-enriched customer review insights aggregated by city, topic and sentiment."
+    config:
+      tags: ["ai"]
+    columns:
+      - name: city
+        description: "City where the reviewed restaurant operates."
+        data_tests: [not_null]
+      - name: topic
+        description: "Topic extracted from the customer review."
+      - name: sentiment_label
+        description: "AI-classified sentiment: positive, negative or neutral."
+      - name: total_reviews
+        description: "Number of distinct enriched reviews."
+      - name: avg_customer_rating
+        description: "Average customer rating."
+      - name: avg_sentiment_score
+        description: "Average AI sentiment score."  

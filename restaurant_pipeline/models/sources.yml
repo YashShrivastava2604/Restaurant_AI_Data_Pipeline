@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: gold
+    catalog: workspace
+    schema: gold
+    tables:
+      - name: fact_orders
+      - name: fact_order_items
+      - name: dim_customers
+      - name: dim_restaurants
+      - name: dim_food
+      - name: dim_date

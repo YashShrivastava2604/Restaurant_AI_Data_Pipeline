@@ -1,0 +1,420 @@
+[0m08:46:24.054255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778baccbe210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778baea7bd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778babb59a30>]}
+
+
+============================== 08:46:24.061441 | 2b8442ef-e0b8-469d-8c3e-62d57d6081d8 ==============================
+[0m08:46:24.061441 [info ] [MainThread]: Running with dbt=1.12.6
+[0m08:46:24.063045 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'version_check': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/yash/.dbt', 'debug': 'False', 'invocation_command': 'dbt init restaurant_pipeline', 'warn_error': 'None', 'log_path': 'logs', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'empty': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m08:46:24.114633 [info ] [MainThread]: Creating dbt configuration folder at /home/yash/.dbt
+[0m08:46:24.120042 [debug] [MainThread]: Starter project path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m08:46:24.137611 [info ] [MainThread]: Setting up your profile.
+[0m08:47:06.138795 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m08:47:06.140031 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m08:47:06.140903 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m09:22:04.967140 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m09:22:05.077322 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/click/termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/click/termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m09:22:05.150885 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 2141.2827, "process_in_blocks": "53768", "process_kernel_time": 1.13545, "process_mem_max_rss": "242488", "process_out_blocks": "88", "process_user_time": 6.25303}
+[0m09:22:05.223584 [debug] [MainThread]: Command `dbt init` failed at 09:22:05.221339 after 2141.37 seconds
+[0m09:22:05.237111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778bab8ce360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778b9b338800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x778b995f8950>]}
+[0m09:22:05.255212 [debug] [MainThread]: Flushing usage events
+[0m11:22:59.146580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e43336e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e2738a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e245f620>]}
+
+
+============================== 11:22:59.151001 | ac0e7eda-e5dc-4ee7-b834-e360980195e7 ==============================
+[0m11:22:59.151001 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:22:59.151691 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/yash/.dbt', 'static_parser': 'True', 'partial_parse': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'log_path': 'logs', 'use_colors': 'True', 'fail_fast': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'hints_enabled': 'True', 'warn_error': 'None', 'version_check': 'True', 'no_print': 'None', 'invocation_command': 'dbt list', 'write_json': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1'}
+[0m11:22:59.152342 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:22:59.154012 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.15958017, "process_in_blocks": "24", "process_kernel_time": 0.373729, "process_mem_max_rss": "106240", "process_out_blocks": "8", "process_user_time": 1.691616}
+[0m11:22:59.154642 [debug] [MainThread]: Command `dbt list` failed at 11:22:59.154516 after 0.16 seconds
+[0m11:22:59.155072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e12f63c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e1e23cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c9e1e21640>]}
+[0m11:22:59.155518 [debug] [MainThread]: Flushing usage events
+[0m11:23:00.155354 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:23:19.239277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e88e2780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e579b320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e5a94440>]}
+
+
+============================== 11:23:19.242777 | ced7f13c-5050-46b2-8322-c371d0da51ab ==============================
+[0m11:23:19.242777 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:23:19.243355 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'printer_width': '80', 'debug': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt init restaurant_pipeline', 'introspect': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'use_colors': 'True', 'write_json': 'True', 'partial_parse': 'True', 'log_format': 'default', 'fail_fast': 'False', 'log_path': 'logs', 'maximum_seed_size_mib': '1', 'empty': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/yash/.dbt', 'hints_enabled': 'True'}
+[0m11:23:19.270252 [info ] [MainThread]: A project called restaurant_pipeline already exists here.
+[0m11:23:19.271875 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.1445724, "process_in_blocks": "224", "process_kernel_time": 0.376937, "process_mem_max_rss": "106652", "process_out_blocks": "16", "process_user_time": 1.827328}
+[0m11:23:19.272468 [debug] [MainThread]: Command `dbt init` succeeded at 11:23:19.272340 after 0.15 seconds
+[0m11:23:19.273625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e7783f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e45604d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7710e5a94440>]}
+[0m11:23:19.275721 [debug] [MainThread]: Flushing usage events
+[0m11:23:20.189808 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:23:35.652230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef442e09b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef4455d700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef441e1970>]}
+
+
+============================== 11:23:35.655475 | 57dab2eb-277f-454f-a15e-75694ba6022f ==============================
+[0m11:23:35.655475 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:23:35.656146 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'version_check': 'True', 'warn_error': 'None', 'debug': 'False', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt list', 'use_colors': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'log_format': 'default', 'empty': 'None', 'quiet': 'False', 'profiles_dir': '/home/yash/.dbt', 'hints_enabled': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'partial_parse': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'no_print': 'None'}
+[0m11:23:35.656786 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:23:35.658073 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.09939954, "process_in_blocks": "0", "process_kernel_time": 0.23955, "process_mem_max_rss": "106384", "process_out_blocks": "8", "process_user_time": 1.70879}
+[0m11:23:35.658720 [debug] [MainThread]: Command `dbt list` failed at 11:23:35.658596 after 0.10 seconds
+[0m11:23:35.659139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef442e09b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef44009880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ef477b7410>]}
+[0m11:23:35.659652 [debug] [MainThread]: Flushing usage events
+[0m11:23:36.618576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:23:42.543820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8dadc350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8db020c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8db029c0>]}
+
+
+============================== 11:23:42.547067 | 9adaea8a-501f-4785-b04c-e6f25fafd6f4 ==============================
+[0m11:23:42.547067 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:23:42.547669 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'debug': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'partial_parse': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/yash/.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt clean', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'static_parser': 'True', 'warn_error': 'None', 'introspect': 'True', 'version_check': 'True', 'printer_width': '80', 'log_path': 'logs', 'log_format': 'default', 'write_json': 'True', 'cache_selected_only': 'False'}
+[0m11:23:42.548548 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:23:42.550025 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": false, "command_wall_clock_time": 0.099025294, "process_in_blocks": "0", "process_kernel_time": 0.292981, "process_mem_max_rss": "106452", "process_out_blocks": "8", "process_user_time": 1.681634}
+[0m11:23:42.550647 [debug] [MainThread]: Command `dbt clean` failed at 11:23:42.550527 after 0.10 seconds
+[0m11:23:42.551063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8dadee40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8d247860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfd8f88b6b0>]}
+[0m11:23:42.551715 [debug] [MainThread]: Flushing usage events
+[0m11:23:43.481790 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:29:04.743660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7920678d5fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792067be6fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792069d7b8c0>]}
+
+
+============================== 11:29:04.751924 | 20b2f7bb-bc8c-4bdb-9f52-d5fb75faa3a0 ==============================
+[0m11:29:04.751924 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:29:04.752712 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'invocation_command': 'dbt init restaurant_pipeline', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/yash/.dbt', 'target_path': 'None', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'quiet': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'printer_width': '80', 'static_parser': 'True', 'version_check': 'True'}
+[0m11:29:04.784877 [debug] [MainThread]: Starter project path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m11:29:04.799532 [info ] [MainThread]: Setting up your profile.
+[0m11:29:14.601191 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:29:14.601809 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:29:14.602232 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:43:45.658424 [info ] [MainThread]: Profile restaurant_pipeline written to /home/yash/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m11:43:45.693781 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m11:43:45.697569 [info ] [MainThread]: dbt version: 1.12.6
+[0m11:43:45.698443 [info ] [MainThread]: python version: 3.12.3
+[0m11:43:45.699024 [info ] [MainThread]: python path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/bin/python
+[0m11:43:45.701095 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m11:43:45.844467 [info ] [MainThread]: Using profiles dir at /home/yash/.dbt
+[0m11:43:45.845154 [info ] [MainThread]: Using profiles.yml file at /home/yash/.dbt/profiles.yml
+[0m11:43:45.845607 [info ] [MainThread]: Using dbt_project.yml file at /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/restaurant_pipeline/dbt_project.yml
+[0m11:43:45.846688 [info ] [MainThread]: adapter type: databricks
+[0m11:43:45.847607 [info ] [MainThread]: adapter version: 1.13.0
+[0m11:43:46.012619 [info ] [MainThread]: Configuration:
+[0m11:43:46.013298 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:43:46.013769 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:43:46.014260 [info ] [MainThread]: Required dependencies:
+[0m11:43:46.015213 [debug] [MainThread]: Executing "git --help"
+[0m11:43:46.034215 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:43:46.034909 [debug] [MainThread]: STDERR: "b''"
+[0m11:43:46.035452 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:43:46.035922 [info ] [MainThread]: Connection:
+[0m11:43:46.036456 [info ] [MainThread]:   host: https://dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668
+[0m11:43:46.037199 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/42b3bc6aee5fea94
+[0m11:43:46.037817 [info ] [MainThread]:   catalog: workspace
+[0m11:43:46.038255 [info ] [MainThread]:   schema: gold
+[0m11:43:46.040686 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m11:43:46.449421 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m11:43:46.450310 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m11:43:49.527623 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://https://dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668/.well-known/databricks-config' failed after 3 attempts (last error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: //dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668/.well-known/databricks-config (Caused by NameResolutionError("HTTPSConnection(host='https', port=443): Failed to resolve 'https' ([Errno -2] Name or service not known)"))). Proceeding as a non-SPOG host. If https://dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668 is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m11:43:49.551966 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m11:43:49.552613 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m11:43:49.553139 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m11:43:49.553646 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m11:43:49.554431 [debug] [MainThread]: Using databricks connection "debug"
+[0m11:43:49.554949 [debug] [MainThread]: On debug: select 1 as id
+[0m11:43:49.555578 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:43:52.899120 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m11:43:52.933801 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=1.0117988586425781/900.0, error-message=, http-code=404, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m11:43:52.934496 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server. 
+[0m11:43:52.935117 [debug] [MainThread]: On debug: No close available on handle
+[0m11:43:52.935603 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:43:52.936044 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:43:52.936449 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:43:52.936952 [info ] [MainThread]: Your new dbt project "restaurant_pipeline" was created!
+Initialized new project in /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/restaurant_pipeline/restaurant_pipeline
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:43:52.937537 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m11:43:52.944152 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 887.9609, "process_in_blocks": "1176", "process_kernel_time": 1.997546, "process_mem_max_rss": "250248", "process_out_blocks": "104", "process_user_time": 7.122939}
+[0m11:43:52.945650 [debug] [MainThread]: Command `dbt init` succeeded at 11:43:52.945376 after 887.96 seconds
+[0m11:43:52.946870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79205449b5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79205449b7a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792056748830>]}
+[0m11:43:52.947878 [debug] [MainThread]: Flushing usage events
+[0m11:43:53.962158 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:49:57.681527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb2a0f00e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb2a1d7620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb29e4f980>]}
+
+
+============================== 11:49:57.692384 | 3b805bee-f305-443b-b469-2b59fff50b0a ==============================
+[0m11:49:57.692384 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:49:57.693861 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'target_path': 'None', 'empty': 'None', 'version_check': 'True', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init restaurant_pipeline', 'use_colors': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'quiet': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'profiles_dir': '/home/yash/.dbt', 'maximum_seed_size_mib': '1', 'log_path': 'logs'}
+[0m11:49:57.733992 [debug] [MainThread]: Starter project path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m11:49:57.760046 [info ] [MainThread]: Setting up your profile.
+[0m11:50:11.449965 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:50:11.451037 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:50:11.451905 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:53:58.338538 [info ] [MainThread]: Profile restaurant_pipeline written to /home/yash/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m11:53:58.345896 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m11:53:58.347994 [info ] [MainThread]: dbt version: 1.12.6
+[0m11:53:58.349114 [info ] [MainThread]: python version: 3.12.3
+[0m11:53:58.350060 [info ] [MainThread]: python path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/bin/python
+[0m11:53:58.351260 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m11:53:58.521053 [info ] [MainThread]: Using profiles dir at /home/yash/.dbt
+[0m11:53:58.522279 [info ] [MainThread]: Using profiles.yml file at /home/yash/.dbt/profiles.yml
+[0m11:53:58.523350 [info ] [MainThread]: Using dbt_project.yml file at /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/restaurant_pipeline/dbt_project.yml
+[0m11:53:58.524774 [info ] [MainThread]: adapter type: databricks
+[0m11:53:58.526660 [info ] [MainThread]: adapter version: 1.13.0
+[0m11:53:58.771770 [info ] [MainThread]: Configuration:
+[0m11:53:58.772657 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:53:58.773507 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:53:58.774489 [info ] [MainThread]: Required dependencies:
+[0m11:53:58.775681 [debug] [MainThread]: Executing "git --help"
+[0m11:53:58.781452 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:53:58.782375 [debug] [MainThread]: STDERR: "b''"
+[0m11:53:58.782985 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:53:58.783745 [info ] [MainThread]: Connection:
+[0m11:53:58.784543 [info ] [MainThread]:   host: dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668
+[0m11:53:58.785326 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/42b3bc6aee5fea94
+[0m11:53:58.786181 [info ] [MainThread]:   catalog: workspace
+[0m11:53:58.787068 [info ] [MainThread]:   schema: gold
+[0m11:53:58.788550 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m11:53:59.109643 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m11:53:59.110307 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m11:54:06.713859 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668/.well-known/databricks-config' failed after 3 attempts (last error: Expecting value: line 1 column 1 (char 0)). Proceeding as a non-SPOG host. If dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668 is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m11:54:06.728170 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m11:54:06.731143 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m11:54:06.734974 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m11:54:06.737834 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m11:54:06.740574 [debug] [MainThread]: Using databricks connection "debug"
+[0m11:54:06.742396 [debug] [MainThread]: On debug: select 1 as id
+[0m11:54:06.744363 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:54:10.158347 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m11:54:10.273035 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=1.3136744499206543/900.0, error-message=, http-code=404, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m11:54:10.274196 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server. 
+[0m11:54:10.275104 [debug] [MainThread]: On debug: No close available on handle
+[0m11:54:10.275891 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:54:10.277810 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:54:10.280453 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:54:10.281542 [info ] [MainThread]: Your new dbt project "restaurant_pipeline" was created!
+Initialized new project in /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/restaurant_pipeline/restaurant_pipeline
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:54:10.282455 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m11:54:10.284949 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 252.7666, "process_in_blocks": "0", "process_kernel_time": 1.788509, "process_mem_max_rss": "250372", "process_out_blocks": "104", "process_user_time": 7.931476}
+[0m11:54:10.286773 [debug] [MainThread]: Command `dbt init` succeeded at 11:54:10.286490 after 252.77 seconds
+[0m11:54:10.287907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb135a9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb12c777d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aeb12c77860>]}
+[0m11:54:10.288913 [debug] [MainThread]: Flushing usage events
+[0m11:54:11.678286 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:16.703683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8692666810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e869438fb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8691ff29c0>]}
+
+
+============================== 11:55:16.708888 | 62f9d69e-9f5b-46ed-9371-d90e0eaa1695 ==============================
+[0m11:55:16.708888 [info ] [MainThread]: Running with dbt=1.12.6
+[0m11:55:16.710025 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'static_parser': 'True', 'partial_parse': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'profiles_dir': '/home/yash/.dbt', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'quiet': 'False', 'no_print': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'warn_error': 'None', 'fail_fast': 'False', 'hints_enabled': 'True', 'introspect': 'True', 'target_path': 'None', 'version_check': 'True', 'log_path': 'logs', 'maximum_seed_size_mib': '1', 'log_format': 'default'}
+[0m11:55:16.730154 [info ] [MainThread]: dbt version: 1.12.6
+[0m11:55:16.730905 [info ] [MainThread]: python version: 3.12.3
+[0m11:55:16.731683 [info ] [MainThread]: python path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/bin/python
+[0m11:55:16.732877 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m11:55:18.939087 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:55:18.940177 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:55:18.940789 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:55:20.491273 [info ] [MainThread]: Using profiles dir at /home/yash/.dbt
+[0m11:55:20.492173 [info ] [MainThread]: Using profiles.yml file at /home/yash/.dbt/profiles.yml
+[0m11:55:20.492872 [info ] [MainThread]: Using dbt_project.yml file at /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml
+[0m11:55:20.493640 [info ] [MainThread]: adapter type: databricks
+[0m11:55:20.494884 [info ] [MainThread]: adapter version: 1.13.0
+[0m11:55:20.496107 [info ] [MainThread]: Configuration:
+[0m11:55:20.497347 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:55:20.498855 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:55:20.499626 [info ] [MainThread]: Required dependencies:
+[0m11:55:20.500366 [debug] [MainThread]: Executing "git --help"
+[0m11:55:20.505044 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:55:20.506494 [debug] [MainThread]: STDERR: "b''"
+[0m11:55:20.507769 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:55:20.508774 [info ] [MainThread]: Connection:
+[0m11:55:20.509605 [info ] [MainThread]:   host: dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668
+[0m11:55:20.510430 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/42b3bc6aee5fea94
+[0m11:55:20.511895 [info ] [MainThread]:   catalog: workspace
+[0m11:55:20.512810 [info ] [MainThread]:   schema: gold
+[0m11:55:20.514125 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m11:55:20.818604 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m11:55:20.819378 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m11:55:28.352584 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668/.well-known/databricks-config' failed after 3 attempts (last error: Expecting value: line 1 column 1 (char 0)). Proceeding as a non-SPOG host. If dbc-e00dd144-9644.cloud.databricks.com/browse/folders/7398328633509?o=7474650106861668 is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m11:55:28.365606 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m11:55:28.368274 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m11:55:28.370633 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m11:55:28.374471 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m11:55:28.377236 [debug] [MainThread]: Using databricks connection "debug"
+[0m11:55:28.379203 [debug] [MainThread]: On debug: select 1 as id
+[0m11:55:28.381222 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:31.743967 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m11:55:31.862769 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=1.3246722221374512/900.0, error-message=, http-code=404, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m11:55:31.864003 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server. 
+[0m11:55:31.864848 [debug] [MainThread]: On debug: No close available on handle
+[0m11:55:31.865556 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:55:31.866308 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m11:55:31.867110 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml> not found
+
+[0m11:55:31.867892 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:55:31.869493 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 15.38303, "process_in_blocks": "0", "process_kernel_time": 1.359325, "process_mem_max_rss": "248972", "process_out_blocks": "24", "process_user_time": 7.949626}
+[0m11:55:31.870555 [debug] [MainThread]: Command `dbt debug` failed at 11:55:31.870379 after 15.38 seconds
+[0m11:55:31.871402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8692a71520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e867bbba630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e867ad3b2f0>]}
+[0m11:55:31.872184 [debug] [MainThread]: Flushing usage events
+[0m11:55:33.279949 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:02:15.807402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495f3a3d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495f92ba40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495f92b410>]}
+
+
+============================== 12:02:15.812347 | dd221843-f533-4d15-b2a0-bca6c6ee441e ==============================
+[0m12:02:15.812347 [info ] [MainThread]: Running with dbt=1.12.6
+[0m12:02:15.813408 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/yash/.dbt', 'empty': 'None', 'target_path': 'None', 'invocation_command': 'dbt debug', 'write_json': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'static_parser': 'True', 'debug': 'False', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'hints_enabled': 'True', 'fail_fast': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True'}
+[0m12:02:15.835808 [info ] [MainThread]: dbt version: 1.12.6
+[0m12:02:15.837301 [info ] [MainThread]: python version: 3.12.3
+[0m12:02:15.838694 [info ] [MainThread]: python path: /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/.venv/bin/python
+[0m12:02:15.840391 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m12:02:17.755830 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:02:17.756645 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:02:17.757225 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:02:19.127459 [info ] [MainThread]: Using profiles dir at /home/yash/.dbt
+[0m12:02:19.128272 [info ] [MainThread]: Using profiles.yml file at /home/yash/.dbt/profiles.yml
+[0m12:02:19.129637 [info ] [MainThread]: Using dbt_project.yml file at /home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml
+[0m12:02:19.131273 [info ] [MainThread]: adapter type: databricks
+[0m12:02:19.132238 [info ] [MainThread]: adapter version: 1.13.0
+[0m12:02:19.133301 [info ] [MainThread]: Configuration:
+[0m12:02:19.134403 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:02:19.135700 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:02:19.136290 [info ] [MainThread]: Required dependencies:
+[0m12:02:19.137158 [debug] [MainThread]: Executing "git --help"
+[0m12:02:19.141269 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:02:19.141985 [debug] [MainThread]: STDERR: "b''"
+[0m12:02:19.142491 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:02:19.143252 [info ] [MainThread]: Connection:
+[0m12:02:19.144105 [info ] [MainThread]:   host: dbc-e00dd144-9644.cloud.databricks.com
+[0m12:02:19.144911 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/42b3bc6aee5fea94
+[0m12:02:19.145606 [info ] [MainThread]:   catalog: workspace
+[0m12:02:19.146396 [info ] [MainThread]:   schema: gold
+[0m12:02:19.149316 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m12:02:19.457171 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m12:02:19.457869 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m12:02:21.027868 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m12:02:21.030270 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m12:02:21.032788 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m12:02:21.036444 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m12:02:21.038838 [debug] [MainThread]: Using databricks connection "debug"
+[0m12:02:21.040748 [debug] [MainThread]: On debug: select 1 as id
+[0m12:02:21.042567 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:02:25.625566 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1d77e-6e51-112b-9884-98e513aa1a08) - Created
+[0m12:02:30.617037 [debug] [MainThread]: SQL status: OK in 9.570 seconds
+[0m12:02:30.621962 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1d77e-6e51-112b-9884-98e513aa1a08, command-id=01f1d77e-6f71-1ef6-81b2-70f84eb90fc6) - Closing
+[0m12:02:31.082570 [debug] [MainThread]: On debug: Close
+[0m12:02:31.084953 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1d77e-6e51-112b-9884-98e513aa1a08) - Closing
+[0m12:02:31.418153 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:02:31.420634 [info ] [MainThread]: [31m1 check failed:[0m
+[0m12:02:31.422198 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/yash/Yash/Data-Engineering/Restaurant_AI_Data_Pipeline/dbt_project.yml> not found
+
+[0m12:02:31.428243 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 15.824005, "process_in_blocks": "3704", "process_kernel_time": 1.179705, "process_mem_max_rss": "250996", "process_out_blocks": "24", "process_user_time": 6.821427}
+[0m12:02:31.433455 [debug] [MainThread]: Command `dbt debug` failed at 12:02:31.432808 after 15.83 seconds
+[0m12:02:31.436033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495eb20590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495ecc49e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b495ecc7920>]}
+[0m12:02:31.437853 [debug] [MainThread]: Flushing usage events
+[0m12:02:32.618955 [debug] [MainThread]: An error was encountered while trying to flush usage events
